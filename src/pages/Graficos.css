@@ -1,0 +1,246 @@
+/* Container principal do dashboard */
+.dashboard-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Conteúdo principal */
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+}
+
+/* Conteúdo do dashboard */
+.dashboard-content {
+  padding: 90px 30px 30px 30px;
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #404040 #1a1a1a;
+}
+
+.dashboard-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dashboard-content::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb {
+  background-color: #404040;
+  border-radius: 3px;
+}
+
+.headerGraficos {
+  margin-bottom: 1.8rem;
+  user-select: none;
+}
+
+.headerGraficos h1 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.headerGraficos p {
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+.cardsResumoGraficos {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardResumo {
+  background: #2d2d2d;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  flex: 1 1 140px;
+  max-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: transform 0.2s ease;
+  border: 1px solid #404040;
+}
+
+.cardResumo:hover {
+  transform: translateY(-5px);
+}
+
+.numeroResumo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4a90e2;
+  margin-bottom: 0.25rem;
+}
+
+.descricaoResumo {
+  font-weight: 600;
+  color: #b0b0b0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.metasDiariasContainer {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metasDiariasContainer h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.descricaoMetas {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  margin-bottom: 0.2rem;
+}
+
+.progressoTexto {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a90e2;
+  margin-bottom: 1rem;
+}
+
+.metasDiasEstilizadas {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.metaDiaEstilizada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.nomeDia {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.circuloModerno {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #4a90e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.circuloInterno {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.meta-ok {
+  border-color: #4a90e2;
+}
+
+.meta-ok .circuloInterno {
+  background-color: #4a90e2;
+}
+
+.meta-nok {
+  border-color: #666;
+}
+
+.meta-nok .circuloInterno {
+  background-color: transparent;
+}
+
+/* Gráficos lado a lado */
+.graficosLadoALado {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Cada gráfico ocupa 50% do container pai */
+.graficoItemFullWidth {
+  flex: 1 1 45%;
+  max-width: 600px;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: #2d2d2d;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #404040;
+}
+
+.graficoItemFullWidth h3 {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  user-select: none;
+}
+
+/* Ajuste de altura para gráficos */
+.graficoItemFullWidth .recharts-wrapper {
+  height: 200px !important;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 60px;
+  }
+  
+  .dashboard-content {
+    padding: 90px 15px 15px 15px;
+  }
+
+  .cardsResumoGraficos {
+    justify-content: center;
+  }
+
+  .metasDias {
+    justify-content: center;
+  }
+
+  .graficosLadoALado {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .graficoItemFullWidth {
+    max-width: 100%;
+    flex-basis: auto;
+  }
+}

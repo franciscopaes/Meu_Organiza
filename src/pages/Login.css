@@ -1,0 +1,283 @@
+/* Estilos globais para body e html */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #1a1a1a;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container principal do formulário de login/cadastro */
+.container {
+  background: #2d2d2d;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 850px;
+  max-width: 100%;
+  border: 1px solid #404040;
+}
+
+/* Container que divide o formulário e a seção de boas-vindas */
+.form-container {
+  display: flex;
+  width: 100%;
+  height: 420px;
+}
+
+/* Lado do formulário e lado de boas-vindas - estilos base */
+.form-side, .welcome-side {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Estilos específicos para o lado do formulário */
+.form-side {
+  background: #2d2d2d;
+  align-items: center;
+  text-align: center;
+}
+
+/* Estilo para o título principal do formulário (Login/Cadastro) */
+.form-title {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+/* Container para cada campo de input com ícone */
+.input-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: 1px solid #404040;
+  width: 350px;
+  background: #404040;
+  box-sizing: border-box;
+}
+
+/* Estilo para o ícone dentro do campo de input */
+.input-field .input-icon {
+  color: #4a90e2;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+/* Estilo para o input de texto dentro do .input-field */
+.input-field input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  font-size: 16px;
+  height: 24px;
+  color: #ffffff;
+}
+
+/* Estilo para o placeholder do input */
+.input-field input::placeholder {
+  color: #b0b0b0;
+}
+
+/* Estilo para o botão principal (Entrar/Cadastrar) no formulário */
+.main-button {
+  padding: 10px 25px;
+  border: none;
+  background: #4a90e2;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+  font-size: 16px;
+  width: 350px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.main-button:hover {
+  background: #357abd;
+}
+
+/* Texto acima dos ícones de login social */
+.social-text {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+/* Container para os ícones de login social */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para cada ícone de login social */
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #404040;
+  color: #4a90e2;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: #404040;
+}
+
+.social-icon:hover {
+  background: #4a90e2;
+  color: #fff;
+  border-color: #4a90e2;
+  transform: translateY(-3px);
+}
+
+/* Estilos para o lado de boas-vindas (direita) */
+.welcome-side {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+.welcome-side h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.welcome-side p {
+  margin-bottom: 20px;
+}
+
+/* Botão "Cadastre-se/Entrar" no lado de boas-vindas */
+.welcome-side button {
+  padding: 10px 25px;
+  background: #2d2d2d;
+  color: #4a90e2;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.welcome-side button:hover {
+  background: #404040;
+}
+
+
+/* Mensagens de erro e sucesso */
+.error-message {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-top: 10px;
+  background: rgba(255, 107, 107, 0.1);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.success-message {
+  color: #10b981;
+  font-size: 14px;
+  margin-top: 10px;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.welcome-logo {
+  width: 120px; /* tamanho padrão */
+  height: auto;
+  margin: 0 auto 20px auto; /* centraliza e dá espaço abaixo */
+  display: block; /* garante centralização */
+  
+  /* Efeito visual */
+  border-radius: 12px; /* deixa levemente arredondado */
+  background-color: rgba(255,255,255,0.1); /* fundo sutil */
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  /* Animação suave de entrada */
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInLogo 0.6s ease forwards;
+}
+
+@keyframes fadeInLogo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  .welcome-logo {
+    width: 90px; /* menor em telas pequenas */
+    margin-bottom: 15px;
+  }
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+
+  .form-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .form-side, .welcome-side {
+    width: 100%;
+    padding: 30px;
+  }
+
+  /* Ajustes de borda para o layout móvel */
+  .welcome-side {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .form-side {
+    padding-bottom: 0;
+  }
+
+  .form-title {
+    font-size: 24px;
+  }
+
+  /* Em telas menores, os campos podem ocupar mais largura */
+  .input-field, .main-button {
+    width: 100% !important;
+    max-width: 350px !important;
+  }
+}

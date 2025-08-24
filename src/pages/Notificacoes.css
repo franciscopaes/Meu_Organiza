@@ -1,0 +1,120 @@
+/* Container principal do dashboard */
+.dashboard-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Conteúdo principal */
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+}
+
+/* Conteúdo do dashboard */
+.dashboard-content {
+  padding: 90px 30px 30px 30px;
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #404040 #1a1a1a;
+}
+
+.dashboard-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dashboard-content::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb {
+  background-color: #404040;
+  border-radius: 3px;
+}
+
+.headerNotificacoes {
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+.headerNotificacoes h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.headerNotificacoes p {
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+.listaNotificacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cardNotificacao {
+  background: #2d2d2d;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #404040;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardNotificacao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cardImportante {
+  border-left: 4px solid #ff9500;
+  background: #2d2d2d;
+}
+
+.textoNotificacao {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.dataNotificacao {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.semNotificacoes {
+  text-align: center;
+  color: #b0b0b0;
+  font-style: italic;
+  font-size: 1.1rem;
+  padding: 2rem;
+  background: #2d2d2d;
+  border-radius: 12px;
+  border: 1px solid #404040;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 60px;
+  }
+  
+  .dashboard-content {
+    padding: 90px 15px 15px 15px;
+  }
+  
+  .headerNotificacoes h1 {
+    font-size: 1.5rem;
+  }
+}

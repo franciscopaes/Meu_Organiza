@@ -1,0 +1,97 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #2d2d2d;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+  padding-top: 20px;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-right: 1px solid #404040;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* Lista */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Itens (li) - apenas container */
+.sidebar li {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Link do menu */
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #b0b0b0;
+  text-decoration: none;
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0 10px;
+  width: calc(100% - 20px);
+}
+
+/* Hover no link */
+.menu-link:hover {
+  background: #404040;
+  color: #ffffff;
+}
+
+/* Link ativo */
+.menu-link.active {
+  background: #4a90e2;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Ícone */
+.menu-link svg {
+  font-size: 20px;
+  min-width: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Texto */
+.menu-link span {
+  white-space: nowrap;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-width 0.3s ease;
+  opacity: 1;
+  max-width: 160px;
+  font-size: 14px;
+}
+
+/* Sidebar colapsada - ajusta largura e esconde texto */
+.sidebar.collapsed .menu-link {
+  justify-content: center;
+  padding: 12px 0;
+  margin: 0 5px;
+  width: calc(100% - 10px);
+}
+
+.sidebar.collapsed .menu-link span {
+  opacity: 0;
+  max-width: 0;
+  display: none;
+}

@@ -1,0 +1,277 @@
+/* Container principal do dashboard */
+.dashboard-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Conteúdo principal */
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+}
+
+/* Conteúdo do dashboard */
+.dashboard-content {
+  padding: 90px 30px 30px 30px;
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #404040 #1a1a1a;
+}
+
+.dashboard-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dashboard-content::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb {
+  background-color: #404040;
+  border-radius: 3px;
+}
+
+/* Header */
+.headerTarefas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.headerTarefas h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  user-select: none;
+}
+
+.filtros {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.filtros select,
+.filtros input[type="date"] {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #404040;
+  font-size: 1rem;
+  background: #2d2d2d;
+  color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.filtros select:hover,
+.filtros input[type="date"]:hover {
+  border-color: #4a90e2;
+}
+
+.filtros select:focus,
+.filtros input[type="date"]:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.btnLimparFiltro {
+  background: transparent;
+  border: none;
+  color: #b0b0b0;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.btnLimparFiltro:hover {
+  color: #4a90e2;
+}
+
+/* Seção criar tarefa */
+.criarTarefa {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.criarTarefa input[type="text"],
+.criarTarefa select,
+.criarTarefa input[type="date"] {
+  flex: 1 1 180px;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1.5px solid #404040;
+  font-size: 1rem;
+  background: #2d2d2d;
+  color: #ffffff;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.criarTarefa input[type="text"]:focus,
+.criarTarefa select:focus,
+.criarTarefa input[type="date"]:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+}
+
+.criarTarefa button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.4rem;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.35);
+  flex-shrink: 0;
+}
+
+.criarTarefa button:hover {
+  background-color: #357abd;
+}
+
+/* Lista de tarefas */
+.listaTarefas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 60vh;
+  overflow-y: auto;
+  border-radius: 14px;
+  background: #2d2d2d;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  border: 1px solid #404040;
+}
+
+/* Item tarefa */
+.listaTarefas li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.15rem 2rem;
+  border-bottom: 1px solid #404040;
+  transition: background-color 0.15s ease;
+  cursor: default;
+}
+
+.listaTarefas li:hover {
+  background-color: #404040;
+}
+
+.listaTarefas li:last-child {
+  border-bottom: none;
+}
+
+.infoTarefa {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoTarefa strong {
+  font-size: 1.15rem;
+  color: #ffffff;
+  user-select: text;
+}
+
+.infoTarefa span {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  margin-top: 4px;
+  user-select: text;
+}
+
+/* Ações dos botões */
+.acoes {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.acoes button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #4a90e2;
+  font-size: 1.4rem;
+  transition: color 0.25s ease;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.acoes button:hover {
+  color: #357abd;
+}
+
+/* Tarefa concluída */
+.concluida strong {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.concluida span {
+  color: #666;
+}
+
+/* Mensagem quando não há tarefas */
+.semTarefas {
+  padding: 2rem;
+  text-align: center;
+  color: #b0b0b0;
+  font-style: italic;
+  font-weight: 600;
+  user-select: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 60px;
+  }
+  
+  .dashboard-content {
+    padding: 90px 15px 15px 15px;
+  }
+  
+  .headerTarefas {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .filtros {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .criarTarefa {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .criarTarefa input[type="text"],
+  .criarTarefa select,
+  .criarTarefa input[type="date"] {
+    flex: none;
+  }
+}
