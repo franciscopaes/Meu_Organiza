@@ -8,7 +8,9 @@
 </p>
 
 <br/>
-<br/>
+<p align="center">
+  <b>Versão 1.0.0</b>
+</p>
 
 <p align="center">
   <b> Tecnologias Utilizadas</b>
@@ -60,6 +62,7 @@ npm install
 npm start
 
 ```
+
 
 ---
 
